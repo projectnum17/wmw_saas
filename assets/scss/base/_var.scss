@@ -1,0 +1,21 @@
+:root {
+    --container-width: 1288px;
+    --container-padding: 20px;
+    --vh: 1vh;
+    --scrl-mt: 120px;
+
+    --accent-color: #009961;
+    --body-bg: #f1f3ea;
+    --text-color: #232523;
+    --text-color-half: #232523b2;
+
+    --accent-border-r: 30px 0 30px 0;
+
+    --ff-base: 'Aeion Mono', sans-serif;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --container-padding: 16px;
+    }
+}
