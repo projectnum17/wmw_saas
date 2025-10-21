@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     headerHandler();
     mobileMenu();
     videoHandler();
-    scannerHandler();
+    // scannerHandler();
     sliders();
-    historyHandler();
+    // historyHandler();
     statisticHandler();
     faqHandler();
 });
