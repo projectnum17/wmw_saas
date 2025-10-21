@@ -1,0 +1,47 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.steps {
+    margin-bottom: var(--section-mb);
+    .section-head {
+        margin: 0 auto 177px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 72px 24px;
+        counter-reset: card-counter;
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateY(-35%);
+            font: 400 128px / 170% var(--ff-base);
+            counter-increment: card-counter;
+            content: counter(card-counter, decimal-leading-zero);
+            color: var(--accent-color);
+        }
+
+        img {
+            margin-left: 45px;
+        }
+    }
+
+    &__text {
+        font: 400 16px / 170% var(--ff-base);
+        padding: 64px 40px;
+        border-radius: 30px;
+        box-shadow: 0px 4px 35px 0px #0000000d;
+        background: #f1f3ea0d;
+        color: var(--text-color-half);
+    }
+}

@@ -4,15 +4,1363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/icons/logo.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./assets/img/icons/logo.png">
     <title>WMW Saas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer type="module" src="./assets/js/main.js"></script>
 </head>
 
 <body>
-    <header class="header">header</header>
-    <main class="main">main</main>
-    <footer class="footer">footer</footer>
+    <header class="header">
+        <div class="container">
+            <a href="#!" class="header__logo">
+                <img width="73" height="55" src="./assets/img/icons/logo.png" alt="Logotype">
+            </a>
+            <nav class="header__nav">
+                <ul>
+                    <li>
+                        <a href="#!">Über Uns</a>
+                    </li>
+                    <li>
+                        <a href="#!">Referenzen</a>
+                    </li>
+                    <li>
+                        <a href="#!">Angebot</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#!" class="header__cta cta">termin anfragen</a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__about">
+                        <div class="hero__description">
+                            <div class="hero__inner">
+                                <h1 class="hero__title">Satz für Satz mehr</h1>
+                                <h2 class="hero__subtitle">
+                                    Software-Sales
+                                </h2>
+                                <p class="hero__text">
+                                    Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag
+                                    deiner
+                                    Kunden erleichtern. Sie verstehen deine Lösung in Sekunden und kaufen, ohne dass du
+                                    ein
+                                    Wort selbst schreiben musst.
+                                </p>
+                                <div class="hero__button">
+                                    <a href="#!" class="hero__cta cta">termin anfragen</a>
+                                </div>
+                            </div>
+                            <div class="hero__logos">
+                                <img width="128" height="49" src="./assets/img/partner_1.png" alt="Logo">
+                                <img width="128" height="49" src="./assets/img/partner_2.png" alt="Logo">
+                                <img width="128" height="49" src="./assets/img/partner_3.png" alt="Logo">
+                                <img width="128" height="49" src="./assets/img/partner_4.png" alt="Logo">
+                            </div>
+                        </div>
+                        <div class="hero__preview js-video-wrapper">
+                            <video class="js-video" playsinline="" poster="./assets/img/video-prev.jpg">
+                                <source src="./assets/video/video.mp4" type="video/mp4">
+                                Your browser does not support the tag.
+                            </video>
+                            <button type="button" class="hero__play js-play">
+                                <img src="./assets/img/icons/ico-play.svg" alt="Play">
+                            </button>
+                            <div class="hero__info js-hero-info">
+                                <div class="hero__item">
+                                    <img width="32" height="32" src="./assets/img/icons/ico-bezier.svg" alt="Icon">
+                                    <span class="hero__count">100+</span>
+                                    <p class="hero__benefit">Landingpages</p>
+                                </div>
+                                <div class="hero__item">
+                                    <img width="32" height="32" src="./assets/img/icons/ico-like.svg" alt="Icon">
+                                    <span class="hero__count">91%</span>
+                                    <p class="hero__benefit">Kundentreue</p>
+                                </div>
+                                <div class="hero__item">
+                                    <img width="32" height="32" src="./assets/img/icons/ico-users.svg" alt="Icon">
+                                    <span class="hero__count">50+</span>
+                                    <p class="hero__benefit">Kundentreue</p>
+                                </div>
+                                <div class="hero__item">
+                                    <img width="32" height="32" src="./assets/img/icons/ico-search.svg" alt="Icon">
+                                    <span class="hero__count">100%</span>
+                                    <p class="hero__benefit">Transparenz</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__marquee">
+                        <div class="hero__marquee-item">
+                            <span>
+                                Pellentesque habitant morbi tristique senectus et netus et&nbsp;
+                            </span>
+                            <span>
+                                Pellentesque habitant morbi tristique senectus et netus et&nbsp;
+                            </span>
+                            <span>
+                                Pellentesque habitant morbi tristique senectus et netus et&nbsp;
+                            </span>
+                        </div>
+                        <div class="hero__marquee-item">
+                            <span>
+                                malesuada fames ac turpis egestas. Nulla cursus nisl at neque&nbsp;
+                            </span>
+                            <span>
+                                malesuada fames ac turpis egestas. Nulla cursus nisl at neque&nbsp;
+                            </span>
+                            <span>
+                                malesuada fames ac turpis egestas. Nulla cursus nisl at neque&nbsp;
+                            </span>
+                        </div>
+                        <div class="hero__marquee-item">
+                            <span>
+                                sollicitudin ullamcorper. Ut mattis felis quis massa tincidunt&nbsp;
+                            </span>
+                            <span>
+                                sollicitudin ullamcorper. Ut mattis felis quis massa tincidunt&nbsp;
+                            </span>
+                            <span>
+                                sollicitudin ullamcorper. Ut mattis felis quis massa tincidunt&nbsp;
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefit">
+            <img class="benefit__bg" src="./assets/img/schema.png" alt="">
+            <div class="container">
+                <div class="benefit__cards">
+                    <div class="benefit__card">
+                        <img width="48" height="48" src="./assets/img/icons/ico-check.svg" alt="Check"
+                            class="benefit__check">
+                        <h2 class="benefit__title">Von einzigartig zu austauschbar</h2>
+                        <p class="benefit__text">
+                            KI-Tools kopieren eure zuvor starken Features in Rekordzeit und machen eure Tech-Lösung
+                            austauschbar. Damit geht euer starkstes Alleinstellungsmerkmal
+                            verloren und tier Grund sich für euch zu entscheiden fällt weg.
+                        </p>
+                    </div>
+                    <div class="benefit__card">
+                        <img width="48" height="48" src="./assets/img/icons/ico-check.svg" alt="Check"
+                            class="benefit__check">
+                        <h2 class="benefit__title">Teure Leads, leerer Kalender</h2>
+                        <p class="benefit__text">
+                            Ihr verbrennt hohe Summen, um neue Kontakte zu gewinnen. Aber solange eure Botschaften
+                            unspezifisch bleiben, sprecht ihr eine zu breite Masse an. Das Ergebnis: Kontakte, die nicht
+                            kaufen wollen und keine Demos buchen.
+                        </p>
+                    </div>
+                    <div class="benefit__card">
+                        <img width="48" height="48" src="./assets/img/icons/ico-check.svg" alt="Check"
+                            class="benefit__check">
+                        <h2 class="benefit__title">Viele Touchpoints, keine Wirkung</h2>
+                        <p class="benefit__text">
+                            Ihr bespielt Google- und Meta-Ads, seid auf Social Media aktiv und versendet E-Mails.
+                            Trotzdem fühlt sich jeder Touchpoint anders an. Das verwirrt euren idealen Kunden und
+                            verhindert, dass aus Interesse Kaufbereitschaft wird.
+                        </p>
+                    </div>
+                </div>
+                <a href="#!" class="benefit__cta cta">termin anfragen</a>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__box">
+                    <img class="about__quote" src="./assets/img/icons/ico-quote.svg" alt="Quote">
+                    <div class="about__content">
+                        <div class="about__hero">
+                            <div class="about__avatar">
+                                <img src="./assets/img/hero.jpg" alt="Hero">
+                            </div>
+                            <p class="about__name">John Doe</p>
+                            <p class="about__role">CEO,WMW Company</p>
+                        </div>
+                        <p class="about__text">
+                            Curabitur nec maximus augue. Phasellus tristique purus quis ornare consequat. Vestibulum id
+                            pulvinar nibh. Donec vestibulum, sem a auctor fringilla, elit lorem viverra tellus, a
+                            condimentum nulla mauris ac quam. Sed auctor ut neque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="adv">
+            <img class="adv__bg" src="./assets/img/schema.png" alt="">
+            <div class="container">
+                <div class="adv__cards">
+                    <a href="#!" class="adv__card">
+                        <div class="adv__thumbnail">
+                            <img src="./assets/img/adv_1.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="adv__content">
+                            <p class="adv__title">Volltreffer-Touchpoints</p>
+                            <p class="adv__text">
+                                Viele Software-Kunden kaufen erst nach 60 Touchpoints. Unsere Texte sorgen dafür, dass
+                                jeder
+                                davon überzeugt.
+                            </p>
+                        </div>
+                        <p class="adv__more">
+                            Read More
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </p>
+                    </a>
+                    <a href="#!" class="adv__card">
+                        <div class="adv__thumbnail">
+                            <img src="./assets/img/adv_2.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="adv__content">
+                            <p class="adv__title">Kunden, die dich verstehen</p>
+                            <p class="adv__text">
+                                Deine Zielkunden verstehen auf den ersten Blick, wie deine Software ihre Probleme löst
+                                und
+                                was sie einzigartig macht.
+                            </p>
+                        </div>
+                        <p class="adv__more">
+                            Read More
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </p>
+                    </a>
+                    <a href="#!" class="adv__card">
+                        <div class="adv__thumbnail">
+                            <img src="./assets/img/adv_3.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="adv__content">
+                            <p class="adv__title">Conversions auf Knopfdruck</p>
+                            <p class="adv__text">
+                                Unsere Werbetexte beseitigen Einwände, schaffen Vertrauen und verwandeln Interessenten
+                                in zahlende Kunden.
+                            </p>
+                        </div>
+                        <p class="adv__more">
+                            Read More
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+                <a href="#!" class="adv__cta cta">termin anfragen</a>
+            </div>
+        </section>
+        <section class="details">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__reminder">
+                        Klar, deine Software ist genial
+                    </p>
+                    <h2 class="section-head__title">Satz für Satz mehr</h2>
+                    <h2 class="section-head__subtitle">
+                        Software-Sales
+                    </h2>
+                    <p class="section-head__text">
+                        Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner Kunden
+                        erleichtern.
+                    </p>
+                </div>
+                <div class="details__content js-scanner-content">
+                    <div class="details__cards">
+                        <div class="details__card">
+                            <img width="40" height="40" src="./assets/img/icons/ico-star.svg" alt="Start">
+                            <h3 class="details__category">Aenean interdum</h3>
+                            <p class="details__description">
+                                Vivamus eget luctus dui, sed porttitor ex duis.
+                            </p>
+                        </div>
+                        <div class="details__card">
+                            <img width="40" height="40" src="./assets/img/icons/ico-star.svg" alt="Start">
+                            <h3 class="details__category">Aenean interdum</h3>
+                            <p class="details__description">
+                                Vivamus eget luctus dui, sed porttitor ex duis.
+                            </p>
+                        </div>
+                        <div class="details__card">
+                            <img width="40" height="40" src="./assets/img/icons/ico-star.svg" alt="Start">
+                            <h3 class="details__category">Aenean interdum</h3>
+                            <p class="details__description">
+                                Vivamus eget luctus dui, sed porttitor ex duis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="details__hero js-scanner-hero">
+                        <img class="details__img js-scanner-img" src="./assets/img/skeleton.png" alt="Skeleton">
+                        <img class="details__img js-scanner-img" src="./assets/img/man.png" alt="Man">
+                        <div class="details__scanner js-scanner-item"></div>
+                        <div class="details__rec js-scanner-rec"></div>
+                    </div>
+                    <div class="details__cards">
+                        <div class="details__card">
+                            <img width="40" height="40" src="./assets/img/icons/ico-star.svg" alt="Start">
+                            <h3 class="details__category">Aenean interdum</h3>
+                            <p class="details__description">
+                                Vivamus eget luctus dui, sed porttitor ex duis.
+                            </p>
+                        </div>
+                        <div class="details__card">
+                            <img width="40" height="40" src="./assets/img/icons/ico-star.svg" alt="Start">
+                            <h3 class="details__category">Aenean interdum</h3>
+                            <p class="details__description">
+                                Vivamus eget luctus dui, sed porttitor ex duis.
+                            </p>
+                        </div>
+                        <div class="details__card">
+                            <img width="40" height="40" src="./assets/img/icons/ico-star.svg" alt="Start">
+                            <h3 class="details__category">Aenean interdum</h3>
+                            <p class="details__description">
+                                Vivamus eget luctus dui, sed porttitor ex duis.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#!" class="details__cta cta">termin anfragen</a>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__reminder">
+                        Klar, deine Software ist genial
+                    </p>
+                    <h2 class="section-head__title">Satz für Satz mehr</h2>
+                    <h2 class="section-head__subtitle">
+                        Software-Sales
+                    </h2>
+                    <p class="section-head__text">
+                        Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner Kunden
+                        erleichtern.
+                    </p>
+                </div>
+                <div class="gallery__content swiper js-gallery">
+                    <div class="gallery__content-wrapper swiper-wrapper">
+                        <div class="gallery__content-slide swiper-slide">
+                            <div class="gallery-box">
+                                <div class="gallery-box__preview">
+                                    <img class="gallery-box__schema" src="./assets/img/schema.png" alt="">
+                                    <div class="gallery-box__about">
+                                        <div class="gallery-box__logo">
+                                            <img width="102" height="76" src="./assets/img/icons/logo-wht.png"
+                                                alt="Logo">
+                                        </div>
+                                        <div class="gallery-box__advantages">
+                                            <div class="gallery-box__advantage">
+                                                <h3>Vestibulum:</h3>
+                                                <p>
+                                                    Vestibulum ut metus placerat ante sollicitudin rutrum
+                                                </p>
+                                            </div>
+                                            <div class="gallery-box__advantage">
+                                                <h3>Vestibulum:</h3>
+                                                <p>
+                                                    Vestibulum ut metus placerat ante sollicitudin rutrum
+                                                </p>
+                                            </div>
+                                            <div class="gallery-box__advantage">
+                                                <h3>Vestibulum:</h3>
+                                                <p>
+                                                    Vestibulum ut metus placerat ante sollicitudin rutrum
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-box__content">
+                                    <div class="gallery-box__descr">
+                                        <div class="gallery-box__item">
+                                            <h3 class="gallery-box__title">Aliquam egestas</h3>
+                                            <ul class="gallery-box__points">
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="gallery-box__item">
+                                            <h3 class="gallery-box__title">Aliquam egestas</h3>
+                                            <ul class="gallery-box__points">
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue sed leo at dui tincidunt
+                                                    mollis
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue sed leo at dui tincidunt
+                                                    mollis
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue sed leo at dui tincidunt
+                                                    mollis
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-box__author">
+                                        <div class="gallery-box__avatar">
+                                            <img src="./assets/img/hero.jpg" alt="Hero">
+                                        </div>
+                                        <div class="gallery-box__role">
+                                            <p>John Doe</p>
+                                            <p>CEO,WMW Company</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__content-slide swiper-slide">
+                            <div class="gallery-box">
+                                <div class="gallery-box__preview">
+                                    <img class="gallery-box__schema" src="./assets/img/schema.png" alt="">
+                                    <div class="gallery-box__about">
+                                        <div class="gallery-box__logo">
+                                            <img width="102" height="76" src="./assets/img/icons/logo-wht.png"
+                                                alt="Logo">
+                                        </div>
+                                        <div class="gallery-box__advantages">
+                                            <div class="gallery-box__advantage">
+                                                <h3>Vestibulum:</h3>
+                                                <p>
+                                                    Vestibulum ut metus placerat ante sollicitudin rutrum
+                                                </p>
+                                            </div>
+                                            <div class="gallery-box__advantage">
+                                                <h3>Vestibulum:</h3>
+                                                <p>
+                                                    Vestibulum ut metus placerat ante sollicitudin rutrum
+                                                </p>
+                                            </div>
+                                            <div class="gallery-box__advantage">
+                                                <h3>Vestibulum:</h3>
+                                                <p>
+                                                    Vestibulum ut metus placerat ante sollicitudin rutrum
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gallery-box__content">
+                                    <div class="gallery-box__descr">
+                                        <div class="gallery-box__item">
+                                            <h3 class="gallery-box__title">Aliquam egestas</h3>
+                                            <ul class="gallery-box__points">
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="gallery-box__item">
+                                            <h3 class="gallery-box__title">Aliquam egestas</h3>
+                                            <ul class="gallery-box__points">
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue sed leo at dui tincidunt
+                                                    mollis
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue sed leo at dui tincidunt
+                                                    mollis
+                                                </li>
+                                                <li class="gallery-box__point">
+                                                    Vestibulum auctor consequat arcu in congue sed leo at dui tincidunt
+                                                    mollis
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-box__author">
+                                        <div class="gallery-box__avatar">
+                                            <img src="./assets/img/hero.jpg" alt="Hero">
+                                        </div>
+                                        <div class="gallery-box__role">
+                                            <p>John Doe</p>
+                                            <p>CEO,WMW Company</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-navigation js-gall-nav">
+                    <button type="button" class="slider-navigation__btn js-gall-prev">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9502 9.8833L5.8335 20L15.9502 30.1166" stroke="#009961" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M34.1667 20H6.1167" stroke="#009961" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button type="button" class="slider-navigation__btn js-gall-next">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.0498 9.8833L34.1665 20L24.0498 30.1166" stroke="#009961" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.8335 20H33.8835" stroke="#009961" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="steps">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__reminder">
+                        Klar, deine Software ist genial
+                    </p>
+                    <h2 class="section-head__title">Satz für Satz mehr</h2>
+                    <h2 class="section-head__subtitle">
+                        Software-Sales
+                    </h2>
+                    <p class="section-head__text">
+                        Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner Kunden
+                        erleichtern.
+                    </p>
+                </div>
+                <div class="steps__cards">
+                    <div class="steps__card">
+                        <img width="46" height="46" src="./assets/img/icons/ico-check-grn.svg" alt="Check">
+                        <p class="steps__text">
+                            Morbi vel vestibulum lectus venenatis magna in vitae ante eget sapien placerat condimentum.
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <img width="46" height="46" src="./assets/img/icons/ico-check-grn.svg" alt="Check">
+                        <p class="steps__text">
+                            Morbi vel vestibulum lectus venenatis magna in vitae ante eget sapien placerat condimentum.
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <img width="46" height="46" src="./assets/img/icons/ico-check-grn.svg" alt="Check">
+                        <p class="steps__text">
+                            Morbi vel vestibulum lectus venenatis magna in vitae ante eget sapien placerat condimentum.
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <img width="46" height="46" src="./assets/img/icons/ico-check-grn.svg" alt="Check">
+                        <p class="steps__text">
+                            Morbi vel vestibulum lectus venenatis magna in vitae ante eget sapien placerat condimentum.
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <img width="46" height="46" src="./assets/img/icons/ico-check-grn.svg" alt="Check">
+                        <p class="steps__text">
+                            Morbi vel vestibulum lectus venenatis magna in vitae ante eget sapien placerat condimentum.
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <img width="46" height="46" src="./assets/img/icons/ico-check-grn.svg" alt="Check">
+                        <p class="steps__text">
+                            Morbi vel vestibulum lectus venenatis magna in vitae ante eget sapien placerat condimentum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__reminder">
+                        Klar, deine Software ist genial
+                    </p>
+                    <h2 class="section-head__title">Satz für Satz mehr</h2>
+                    <h2 class="section-head__subtitle">
+                        Software-Sales
+                    </h2>
+                    <p class="section-head__text">
+                        Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner Kunden
+                        erleichtern.
+                    </p>
+                </div>
+                <div class="testimonials__content swiper js-testimonials">
+                    <div class="testimonials__content-wrapper swiper-wrapper">
+                        <div class="testimonials__content-slide swiper-slide">
+                            <div class="testimonials-box">
+                                <img class="testimonials-box__schema" src="./assets/img/schema.png" alt="">
+                                <div class="testimonials-box__avatar">
+                                    <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                                </div>
+                                <div class="testimonials-box__content">
+                                    <p class="testimonials-box__name">John doe</p>
+                                    <p class="testimonials-box__text">
+                                        “Rivamus ut turpis eget lacus iaculis pharetra at id libero. Praesent tempor
+                                        lorem sit amet euismod tempus. Aliquam sed tristique felis. Vestibulum ut
+                                        metus placerat ante sollicitudin rutrum. Donec ut erat massa. Ut pharetra
+                                        nulla ipsum, et blandit metus suscipit. Maecenas eget mauris nibh. Mauris
+                                        est sem, luctus sit amet odio cursus, pulvinar accumsan quam.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__content-slide swiper-slide">
+                            <div class="testimonials-box">
+                                <img class="testimonials-box__schema" src="./assets/img/schema.png" alt="">
+                                <div class="testimonials-box__avatar">
+                                    <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                                </div>
+                                <div class="testimonials-box__content">
+                                    <p class="testimonials-box__name">John doe</p>
+                                    <p class="testimonials-box__text">
+                                        “Rivamus ut turpis eget lacus iaculis pharetra at id libero. Praesent tempor
+                                        lorem sit amet euismod tempus. Aliquam sed tristique felis. Vestibulum ut
+                                        metus placerat ante sollicitudin rutrum. Donec ut erat massa. Ut pharetra
+                                        nulla ipsum, et blandit metus suscipit. Maecenas eget mauris nibh. Mauris
+                                        est sem, luctus sit amet odio cursus, pulvinar accumsan quam.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__content-slide swiper-slide">
+                            <div class="testimonials-box">
+                                <img class="testimonials-box__schema" src="./assets/img/schema.png" alt="">
+                                <div class="testimonials-box__avatar">
+                                    <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                                </div>
+                                <div class="testimonials-box__content">
+                                    <p class="testimonials-box__name">John doe</p>
+                                    <p class="testimonials-box__text">
+                                        “Rivamus ut turpis eget lacus iaculis pharetra at id libero. Praesent tempor
+                                        lorem sit amet euismod tempus. Aliquam sed tristique felis. Vestibulum ut
+                                        metus placerat ante sollicitudin rutrum. Donec ut erat massa. Ut pharetra
+                                        nulla ipsum, et blandit metus suscipit. Maecenas eget mauris nibh. Mauris
+                                        est sem, luctus sit amet odio cursus, pulvinar accumsan quam.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__content-slide swiper-slide">
+                            <div class="testimonials-box">
+                                <img class="testimonials-box__schema" src="./assets/img/schema.png" alt="">
+                                <div class="testimonials-box__avatar">
+                                    <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                                </div>
+                                <div class="testimonials-box__content">
+                                    <p class="testimonials-box__name">John doe</p>
+                                    <p class="testimonials-box__text">
+                                        “Rivamus ut turpis eget lacus iaculis pharetra at id libero. Praesent tempor
+                                        lorem sit amet euismod tempus. Aliquam sed tristique felis. Vestibulum ut
+                                        metus placerat ante sollicitudin rutrum. Donec ut erat massa. Ut pharetra
+                                        nulla ipsum, et blandit metus suscipit. Maecenas eget mauris nibh. Mauris
+                                        est sem, luctus sit amet odio cursus, pulvinar accumsan quam.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__content-slide swiper-slide">
+                            <div class="testimonials-box">
+                                <img class="testimonials-box__schema" src="./assets/img/schema.png" alt="">
+                                <div class="testimonials-box__avatar">
+                                    <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                                </div>
+                                <div class="testimonials-box__content">
+                                    <p class="testimonials-box__name">John doe</p>
+                                    <p class="testimonials-box__text">
+                                        “Rivamus ut turpis eget lacus iaculis pharetra at id libero. Praesent tempor
+                                        lorem sit amet euismod tempus. Aliquam sed tristique felis. Vestibulum ut
+                                        metus placerat ante sollicitudin rutrum. Donec ut erat massa. Ut pharetra
+                                        nulla ipsum, et blandit metus suscipit. Maecenas eget mauris nibh. Mauris
+                                        est sem, luctus sit amet odio cursus, pulvinar accumsan quam.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__content-slide swiper-slide">
+                            <div class="testimonials-box">
+                                <img class="testimonials-box__schema" src="./assets/img/schema.png" alt="">
+                                <div class="testimonials-box__avatar">
+                                    <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                                </div>
+                                <div class="testimonials-box__content">
+                                    <p class="testimonials-box__name">John doe</p>
+                                    <p class="testimonials-box__text">
+                                        “Rivamus ut turpis eget lacus iaculis pharetra at id libero. Praesent tempor
+                                        lorem sit amet euismod tempus. Aliquam sed tristique felis. Vestibulum ut
+                                        metus placerat ante sollicitudin rutrum. Donec ut erat massa. Ut pharetra
+                                        nulla ipsum, et blandit metus suscipit. Maecenas eget mauris nibh. Mauris
+                                        est sem, luctus sit amet odio cursus, pulvinar accumsan quam.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-navigation js-testimonials-nav">
+                    <button type="button" class="slider-navigation__btn js-testimonials-prev">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9502 9.8833L5.8335 20L15.9502 30.1166" stroke="#009961" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M34.1667 20H6.1167" stroke="#009961" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button type="button" class="slider-navigation__btn js-testimonials-next">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.0498 9.8833L34.1665 20L24.0498 30.1166" stroke="#009961" stroke-width="1.5"
+                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.8335 20H33.8835" stroke="#009961" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__reminder">
+                        Klar, deine Software ist genial
+                    </p>
+                    <h2 class="section-head__title">Satz für Satz mehr</h2>
+                    <h2 class="section-head__subtitle">
+                        Software-Sales
+                    </h2>
+                    <p class="section-head__text">
+                        Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner Kunden
+                        erleichtern.
+                    </p>
+                </div>
+                <div class="history__display js-history-trigger">
+                    <div class="history__steps">
+                        <div class="history__steps-items">
+                            <div class="history__steps-progress js-history-progress is-active">
+                                <div class="history__steps-item ">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.7335 3.33301H29.2502C35.1835 3.33301 36.6668 4.81634 36.6668 10.733V21.283C36.6668 27.2163 35.1835 28.683 29.2668 28.683H10.7335C4.81683 28.6997 3.3335 27.2163 3.3335 21.2997V10.733C3.3335 4.81634 4.81683 3.33301 10.7335 3.33301Z"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 28.7002V36.6669" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3.3335 21.667H36.6668" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.5 36.667H27.5" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <div>
+                                        <p>Step 1</p>
+                                        <p>Lorem ipsum dolor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="history__steps-progress js-history-progress">
+                                <div class="history__steps-item">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M32.2001 16.6663H7.81678C5.35011 16.6663 3.3501 14.6496 3.3501 12.1996V7.81629C3.3501 5.34962 5.36678 3.34961 7.81678 3.34961H32.2001C34.6668 3.34961 36.6668 5.36629 36.6668 7.81629V12.1996C36.6668 14.6496 34.6501 16.6663 32.2001 16.6663Z"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M32.2001 36.6663H7.81678C5.35011 36.6663 3.3501 34.6496 3.3501 32.1996V27.8163C3.3501 25.3496 5.36678 23.3496 7.81678 23.3496H32.2001C34.6668 23.3496 36.6668 25.3663 36.6668 27.8163V32.1996C36.6668 34.6496 34.6501 36.6663 32.2001 36.6663Z"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M10 8.33301V11.6663" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.6665 8.33301V11.6663" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10 28.333V31.6663" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.6665 28.333V31.6663" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.3335 10H30.0002" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.3335 30H30.0002" stroke="#292D3266" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <div>
+                                        <p>Step 2</p>
+                                        <p>Lorem ipsum dolor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="history__steps-progress js-history-progress">
+                                <div class="history__steps-item">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.3335 15V13.3333C3.3335 8.33333 6.66683 5 11.6668 5H28.3335C33.3335 5 36.6668 8.33333 36.6668 13.3333V26.6667C36.6668 31.6667 33.3335 35 28.3335 35H26.6668"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.1499 19.5166C13.8499 20.4999 19.4999 26.1666 20.4999 33.8666"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.3667 25.1162C10.0167 25.8329 14.1667 29.9996 14.9 35.6496"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M3.2998 31.4336C6.11647 31.8003 8.19981 33.8669 8.56648 36.7003"
+                                            stroke="#292D3266" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <div>
+                                        <p>Step 3</p>
+                                        <p>Lorem ipsum dolor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history__content">
+                        <div class="history__content-items js-history-block">
+                            <span class="history__content-label">Step 1</span>
+                            <div class="history__content-thumb">
+                                <img width="718" height="334" src="./assets/img/hero.jpg" alt="Hero">
+                            </div>
+                            <h2 class="history__content-title">Lorem ipsum dolor</h2>
+                            <p class="history__content-text">
+                                Proin non massa quis mauris viverra efficitur semper vitae ipsum. Pellentes feugiat
+                                nulla ut
+                                justo eleifend, id vehicula neque lobortis. Phasellus blandit id sem id mollis.
+                            </p>
+                        </div>
+                        <div class="history__content-items js-history-block">
+                            <span class="history__content-label">Step 2</span>
+                            <div class="history__content-thumb">
+                                <img width="718" height="334" src="./assets/img/hero.jpg" alt="Hero">
+                            </div>
+                            <h2 class="history__content-title">Lorem ipsum dolor</h2>
+                            <p class="history__content-text">
+                                Proin non massa quis mauris viverra efficitur semper vitae ipsum. Pellentes feugiat
+                                nulla ut
+                                justo eleifend, id vehicula neque lobortis. Phasellus blandit id sem id mollis.
+                            </p>
+                        </div>
+                        <div class="history__content-items js-history-block">
+                            <span class="history__content-label">Step 3</span>
+                            <div class="history__content-thumb">
+                                <img width="718" height="334" src="./assets/img/hero.jpg" alt="Hero">
+                            </div>
+                            <h2 class="history__content-title">Lorem ipsum dolor</h2>
+                            <p class="history__content-text">
+                                Proin non massa quis mauris viverra efficitur semper vitae ipsum. Pellentes feugiat
+                                nulla ut
+                                justo eleifend, id vehicula neque lobortis. Phasellus blandit id sem id mollis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pricing">
+            <div class="container">
+                <div class="pricing__action">
+                    <img src="./assets/img/schema.png" alt="" class="pricing__schema">
+                    <img class="pricing__action-feather" src="./assets/img/feather.png" alt="">
+                    <p class="pricing__action-signature">
+                        Satz für Satz mehr Software Sales.
+                    </p>
+                    <p class="pricing__action-label">
+                        Pricing
+                    </p>
+                    <p class="pricing__action-value">1099€,-</p>
+                </div>
+                <div class="pricing__content">
+                    <span class="pricing__content-label">Lorem ipsum</span>
+                    <h3 class="pricing__content-title">
+                        Monthly Subscription
+                    </h3>
+                    <p class="pricing__content-text">
+                        Curabitur interdum nunc luctus justo cursus consequat. Vivamus rhoncus maximus lacus eu mattis.
+                        Vestibulum ultrices, massa at posuere ornare, nisi urna consequat eros, in efficitur nisl metus
+                        sed lorem.
+                    </p>
+                    <ul class="pricing__content-list">
+                        <div class="col">
+                            <li class="pricing__content-item">
+                                Nam eu aliquet lectus, laoreet maximus ante.
+                            </li>
+                            <li class="pricing__content-item">
+                                Nam eu aliquet lectus, laoreet maximus ante.
+                            </li>
+                            <li class="pricing__content-item">
+                                Nam eu aliquet lectus, laoreet maximus ante.
+                            </li>
+                        </div>
+                        <div class="col">
+                            <li class="pricing__content-item">
+                                Nam eu aliquet lectus, laoreet maximus ante.
+                            </li>
+                            <li class="pricing__content-item">
+                                Nam eu aliquet lectus, laoreet maximus ante.
+                            </li>
+                            <li class="pricing__content-item">
+                                Nam eu aliquet lectus, laoreet maximus ante.
+                            </li>
+                        </div>
+                    </ul>
+                    <a href="#!" class="pricing__content-cta cta">join now</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="pricing__partners">
+                    <div class="pricing__partners-marquee">
+                        <img src="./assets/img/part_1.png" alt="Logo">
+                        <img src="./assets/img/part_2.png" alt="Logo">
+                        <img src="./assets/img/part_3.png" alt="Logo">
+                        <img src="./assets/img/part_4.png" alt="Logo">
+                        <img src="./assets/img/part_5.png" alt="Logo">
+                        <img src="./assets/img/part_6.png" alt="Logo">
+                        <img src="./assets/img/part_7.png" alt="Logo">
+                        <img src="./assets/img/part_8.png" alt="Logo">
+                        <img src="./assets/img/part_1.png" alt="Logo">
+                        <img src="./assets/img/part_2.png" alt="Logo">
+                        <img src="./assets/img/part_3.png" alt="Logo">
+                        <img src="./assets/img/part_4.png" alt="Logo">
+                        <img src="./assets/img/part_5.png" alt="Logo">
+                        <img src="./assets/img/part_6.png" alt="Logo">
+                        <img src="./assets/img/part_7.png" alt="Logo">
+                        <img src="./assets/img/part_8.png" alt="Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="statistic">
+            <img class="statistic__bg" src="./assets/img/schema.png" alt="">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-head__reminder">
+                        Klar, deine Software ist genial
+                    </p>
+                    <h2 class="section-head__title">Satz für Satz mehr</h2>
+                    <h2 class="section-head__subtitle">
+                        Software-Sales
+                    </h2>
+                    <p class="section-head__text">
+                        Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner Kunden
+                        erleichtern.
+                    </p>
+                </div>
+                <div class="statistic__cards">
+                    <a href="#!" class="statistic__card">
+                        <div class="statistic__card-avatar">
+                            <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                        </div>
+                        <div class="statistic__card-content">
+                            <p class="statistic__card-name">John doe</p>
+                            <p class="statistic__card-text">
+                                Deine Zielkunden verstehen auf den ersten Blick, wie deine Software ihre Probleme löst
+                                und was sie einzigartig macht.
+                            </p>
+                            <p class="statistic__card-more">
+                                Read More
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#!" class="statistic__card">
+                        <div class="statistic__card-avatar">
+                            <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                        </div>
+                        <div class="statistic__card-content">
+                            <p class="statistic__card-name">John doe</p>
+                            <p class="statistic__card-text">
+                                Deine Zielkunden verstehen auf den ersten Blick, wie deine Software ihre Probleme löst
+                                und was sie einzigartig macht.
+                            </p>
+                            <p class="statistic__card-more">
+                                Read More
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#!" class="statistic__card">
+                        <div class="statistic__card-avatar">
+                            <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                        </div>
+                        <div class="statistic__card-content">
+                            <p class="statistic__card-name">John doe</p>
+                            <p class="statistic__card-text">
+                                Deine Zielkunden verstehen auf den ersten Blick, wie deine Software ihre Probleme löst
+                                und was sie einzigartig macht.
+                            </p>
+                            <p class="statistic__card-more">
+                                Read More
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#!" class="statistic__card">
+                        <div class="statistic__card-avatar">
+                            <img width="96" height="96" src="./assets/img/hero.jpg" alt="Hero">
+                        </div>
+                        <div class="statistic__card-content">
+                            <p class="statistic__card-name">John doe</p>
+                            <p class="statistic__card-text">
+                                Deine Zielkunden verstehen auf den ersten Blick, wie deine Software ihre Probleme löst
+                                und was sie einzigartig macht.
+                            </p>
+                            <p class="statistic__card-more">
+                                Read More
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4302 5.92993L20.5002 11.9999L14.4302 18.0699" stroke="white"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M3.5 12H20.33" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="statistic__items">
+                    <div class="statistic__row">
+                        <div class="statistic__box">
+                            <div class="col">
+                                <p class="statistic__box-title">Werbetexte geschrieben</p>
+                                <span class="statistic__box-val">545</span>
+                                <span class="statistic__box-num">
+                                    +24%
+                                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.70476 6.10268C4.89123 6.96881 4.11309 7.79855 3.33417 8.6287C2.66745 9.33753 2.00072 10.0453 1.334 10.7519C1.1159 10.9822 0.852802 11.0533 0.556237 10.9605C0.259673 10.8676 0.0831192 10.644 0.0177288 10.3278C-0.0453536 10.0203 0.0650407 9.76801 0.267366 9.55086C1.19206 8.56831 2.11599 7.58549 3.03915 6.6024C3.72357 5.87503 4.4085 5.14808 5.09394 4.42153C5.46974 4.02485 5.90478 4.02281 6.27905 4.41539C6.79909 4.96064 7.31567 5.50999 7.8288 6.06342C7.88688 6.12558 7.92342 6.21023 7.96458 6.27566L12.2865 1.67672C12.2249 1.67263 12.1657 1.66568 12.1061 1.66527C11.606 1.66527 11.106 1.67059 10.606 1.662C10.2755 1.65668 10.0267 1.48615 9.8909 1.16677C9.76127 0.861702 9.80435 0.56563 10.0063 0.305544C10.0787 0.209149 10.171 0.131732 10.2761 0.0792641C10.3811 0.0267961 10.4961 0.000679474 10.6121 0.00292841C11.8091 6.58341e-05 13.0092 -0.00238781 14.2078 0.00415523C14.6605 0.00660887 14.9956 0.372201 14.9971 0.852706C15.001 2.12042 15.001 3.38813 14.9971 4.65585C14.9971 5.13758 14.6421 5.51462 14.212 5.51053C13.782 5.50644 13.4504 5.14658 13.4427 4.66362C13.4354 4.1459 13.4408 3.62777 13.4408 3.10965V2.89495L13.3708 2.8467C13.3273 2.91957 13.2787 2.98888 13.2254 3.05403C11.695 4.68406 10.1635 6.31287 8.63079 7.94045C8.23191 8.36371 7.80072 8.36452 7.40337 7.94413C6.88153 7.39179 6.36059 6.83768 5.84055 6.28179C5.79593 6.23395 5.76015 6.17506 5.70476 6.10268Z"
+                                            fill="#009961" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="col">
+                                <svg width="168" height="120" viewBox="0 0 168 120" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 118L21.7767 98.6668L30.2177 76.9167L42.7588 107.609L51.2 93.1085L60.1235 2L83.0353 91.1753L99.6765 61.4502L131.512 118L141.4 103.742L147.429 80.0586L166 61.4502"
+                                        stroke="#009961" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="statistic__box">
+                            <div class="col">
+                                <p class="statistic__box-title">Werbetexte geschrieben</p>
+                                <span class="statistic__box-val">2500+</span>
+                            </div>
+                            <div class="col">
+                                <svg width="158" height="128" viewBox="0 0 158 128" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 126L23.0105 114.18L29.7154 95.0001L39.3264 103.921L67.7125 2L83.8054 78.0504L99.2278 43.705L120.909 95.0001L131.637 79.3885L140.131 85.4101L156 50.1727"
+                                        stroke="#009961" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistic__row">
+                        <div class="statistic__box">
+                            <svg width="333" height="332" viewBox="0 0 333 332" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M226.739 270.329C240.499 262.384 252.56 251.808 262.232 239.202C271.904 226.597 278.999 212.21 283.112 196.863C287.224 181.516 288.273 165.509 286.199 149.756C284.125 134.003 278.969 118.814 271.025 105.054L230.154 128.65C234.999 137.043 238.145 146.308 239.409 155.916C240.674 165.524 240.034 175.287 237.526 184.648C235.018 194.009 230.691 202.784 224.791 210.473C218.891 218.161 211.535 224.612 203.143 229.458L226.739 270.329Z"
+                                    fill="#00D98A" />
+                                <path class="number"
+                                    d="M251.72 195.64C252.14 195.232 252.272 194.812 252.272 194.056V193.096H252.284C252.284 192.508 251.888 192.088 251.324 192.088H251.06C250.496 192.088 250.1 192.508 250.1 193.096V193.936H248.552V193.096H248.564C248.564 191.776 249.68 190.696 251.06 190.696H251.324C252.704 190.696 253.82 191.776 253.82 193.096V194.056V194.08C253.82 195.124 253.58 195.88 252.932 196.528L250.46 199.024H253.892V200.416H248.312V199.024L251.72 195.64ZM255.76 196.216L256.24 190.816H260.716V192.208H257.656L257.452 194.524C257.716 194.092 258.148 193.816 258.784 193.816H258.988C260.272 193.816 260.956 194.896 260.956 196.216V198.136C260.956 199.456 259.84 200.536 258.46 200.536H258.196C256.816 200.536 255.7 199.456 255.7 198.136H255.688V197.776H257.236V198.136C257.236 198.724 257.632 199.144 258.196 199.144H258.46C259.024 199.144 259.42 198.724 259.42 198.136V196.216C259.42 195.628 259.108 195.208 258.58 195.208H258.376C257.836 195.208 257.404 195.544 257.308 196.036L257.296 196.216H255.76ZM263.651 195.556C262.739 195.556 262.163 194.92 262.163 193.936V192.316C262.163 191.332 262.739 190.696 263.651 190.696H264.131C265.031 190.696 265.607 191.332 265.607 192.316V193.936C265.607 194.92 265.031 195.556 264.131 195.556H263.651ZM262.163 199.708L263.075 198.244L264.455 196.984L264.803 197.2L264.287 199L263.375 200.464L262.163 199.708ZM263.555 193.936C263.555 194.164 263.639 194.308 263.783 194.308H263.987C264.131 194.308 264.215 194.164 264.215 193.936V192.256C264.215 192.04 264.131 191.896 263.987 191.896H263.783C263.639 191.896 263.555 192.04 263.555 192.256V193.936ZM265.439 198.916V197.296C265.439 196.312 266.015 195.676 266.915 195.676H267.395C268.307 195.676 268.883 196.312 268.883 197.296V198.916C268.883 199.9 268.307 200.536 267.395 200.536H266.915C266.015 200.536 265.439 199.9 265.439 198.916ZM266.243 194.164L266.759 192.364L267.671 190.9L268.883 191.656L267.971 193.12L266.591 194.38L266.243 194.164ZM266.831 198.916C266.831 199.144 266.915 199.288 267.059 199.288H267.263C267.407 199.288 267.491 199.144 267.491 198.916V197.296C267.491 197.068 267.407 196.924 267.263 196.924H267.059C266.915 196.924 266.831 197.068 266.831 197.296V198.916Z"
+                                    fill="white" />
+                                <path
+                                    d="M61.4643 226.043C77.5085 253.833 103.935 274.11 134.93 282.416C165.925 290.721 198.95 286.373 226.739 270.329L203.143 229.458C186.193 239.244 166.05 241.896 147.145 236.83C128.239 231.765 112.121 219.396 102.335 202.447L61.4643 226.043Z"
+                                    fill="#004F32" />
+                                <path class="number"
+                                    d="M136.405 259.909C136.825 259.501 136.957 259.081 136.957 258.325V257.365H136.969C136.969 256.777 136.573 256.357 136.009 256.357H135.745C135.181 256.357 134.785 256.777 134.785 257.365V258.205H133.237V257.365H133.249C133.249 256.045 134.365 254.965 135.745 254.965H136.009C137.389 254.965 138.505 256.045 138.505 257.365V258.325V258.349C138.505 259.393 138.265 260.149 137.617 260.797L135.145 263.293H138.577V264.685H132.997V263.293L136.405 259.909ZM140.444 260.485L140.924 255.085H145.4V256.477H142.34L142.136 258.793C142.4 258.361 142.832 258.085 143.468 258.085H143.672C144.956 258.085 145.64 259.165 145.64 260.485V262.405C145.64 263.725 144.524 264.805 143.144 264.805H142.88C141.5 264.805 140.384 263.725 140.384 262.405H140.372V262.045H141.92V262.405C141.92 262.993 142.316 263.413 142.88 263.413H143.144C143.708 263.413 144.104 262.993 144.104 262.405V260.485C144.104 259.897 143.792 259.477 143.264 259.477H143.06C142.52 259.477 142.088 259.813 141.992 260.305L141.98 260.485H140.444ZM148.335 259.825C147.423 259.825 146.847 259.189 146.847 258.205V256.585C146.847 255.601 147.423 254.965 148.335 254.965H148.815C149.715 254.965 150.291 255.601 150.291 256.585V258.205C150.291 259.189 149.715 259.825 148.815 259.825H148.335ZM146.847 263.977L147.759 262.513L149.139 261.253L149.487 261.469L148.971 263.269L148.059 264.733L146.847 263.977ZM148.239 258.205C148.239 258.433 148.323 258.577 148.467 258.577H148.671C148.815 258.577 148.899 258.433 148.899 258.205V256.525C148.899 256.309 148.815 256.165 148.671 256.165H148.467C148.323 256.165 148.239 256.309 148.239 256.525V258.205ZM150.123 263.185V261.565C150.123 260.581 150.699 259.945 151.599 259.945H152.079C152.991 259.945 153.567 260.581 153.567 261.565V263.185C153.567 264.169 152.991 264.805 152.079 264.805H151.599C150.699 264.805 150.123 264.169 150.123 263.185ZM150.927 258.433L151.443 256.633L152.355 255.169L153.567 255.925L152.655 257.389L151.275 258.649L150.927 258.433ZM151.515 263.185C151.515 263.413 151.599 263.557 151.743 263.557H151.947C152.091 263.557 152.175 263.413 152.175 263.185V261.565C152.175 261.337 152.091 261.193 151.947 261.193H151.743C151.599 261.193 151.515 261.337 151.515 261.565V263.185Z"
+                                    fill="white" />
+                                <path
+                                    d="M257.538 86.4514C237.686 63.9179 210.164 49.5725 180.322 46.2047C150.481 42.837 120.453 50.6876 96.0787 68.2301C71.7041 85.7725 54.7246 111.753 48.4419 141.119C42.1592 170.486 47.0223 201.139 62.0856 227.119L102.913 203.447C93.7251 187.601 90.7589 168.904 94.5909 150.992C98.423 133.081 108.779 117.234 123.646 106.535C138.513 95.8347 156.828 91.0463 175.03 93.1004C193.231 95.1546 210.018 103.904 222.127 117.648L257.538 86.4514Z"
+                                    fill="#009961" />
+                                <path class="number"
+                                    d="M104.808 85.2229L105.288 79.8229H109.764V81.2149H106.704L106.5 83.5309C106.764 83.0989 107.196 82.8229 107.832 82.8229H108.036C109.32 82.8229 110.004 83.9029 110.004 85.2229V87.1429C110.004 88.4629 108.888 89.5429 107.508 89.5429H107.244C105.864 89.5429 104.748 88.4629 104.748 87.1429H104.736V86.7829H106.284V87.1429C106.284 87.7309 106.68 88.1509 107.244 88.1509H107.508C108.072 88.1509 108.468 87.7309 108.468 87.1429V85.2229C108.468 84.6349 108.156 84.2149 107.628 84.2149H107.424C106.884 84.2149 106.452 84.5509 106.356 85.0429L106.344 85.2229H104.808ZM113.479 87.1429C113.479 87.7309 113.875 88.1509 114.439 88.1509H114.703C115.267 88.1509 115.663 87.7309 115.663 87.1429V82.1029C115.663 81.5149 115.267 81.0949 114.703 81.0949H114.439C113.875 81.0949 113.479 81.5149 113.479 82.1029V87.1429ZM111.943 87.1429V82.1029C111.943 80.7829 113.059 79.7029 114.439 79.7029H114.703C116.083 79.7029 117.199 80.7829 117.199 82.1029V87.1429C117.199 88.4629 116.083 89.5429 114.703 89.5429H114.439C113.059 89.5429 111.943 88.4629 111.943 87.1429ZM119.895 84.5629C118.983 84.5629 118.407 83.9269 118.407 82.9429V81.3229C118.407 80.3389 118.983 79.7029 119.895 79.7029H120.375C121.275 79.7029 121.851 80.3389 121.851 81.3229V82.9429C121.851 83.9269 121.275 84.5629 120.375 84.5629H119.895ZM118.407 88.7149L119.319 87.2509L120.699 85.9909L121.047 86.2069L120.531 88.0069L119.619 89.4709L118.407 88.7149ZM119.799 82.9429C119.799 83.1709 119.883 83.3149 120.027 83.3149H120.231C120.375 83.3149 120.459 83.1709 120.459 82.9429V81.2629C120.459 81.0469 120.375 80.9029 120.231 80.9029H120.027C119.883 80.9029 119.799 81.0469 119.799 81.2629V82.9429ZM121.683 87.9229V86.3029C121.683 85.3189 122.259 84.6829 123.159 84.6829H123.639C124.551 84.6829 125.127 85.3189 125.127 86.3029V87.9229C125.127 88.9069 124.551 89.5429 123.639 89.5429H123.159C122.259 89.5429 121.683 88.9069 121.683 87.9229ZM122.487 83.1709L123.003 81.3709L123.915 79.9069L125.127 80.6629L124.215 82.1269L122.835 83.3869L122.487 83.1709ZM123.075 87.9229C123.075 88.1509 123.159 88.2949 123.303 88.2949H123.507C123.651 88.2949 123.735 88.1509 123.735 87.9229V86.3029C123.735 86.0749 123.651 85.9309 123.507 85.9309H123.303C123.159 85.9309 123.075 86.0749 123.075 86.3029V87.9229Z"
+                                    fill="white" />
+                                <path
+                                    d="M271.025 105.054C266.859 97.8393 261.96 91.0744 256.405 84.8667L221.237 116.338C224.625 120.124 227.613 124.25 230.154 128.65L271.025 105.054Z"
+                                    fill="white" />
+                            </svg>
+                            <div class="stats-item statistic__first">
+                                <span>50%</span>
+                                <p>
+                                    Landing pages
+                                </p>
+                            </div>
+                            <div class="stats-item statistic__second">
+                                <span>0%</span>
+                                <p>
+                                    BLABLA
+                                </p>
+                            </div>
+                            <div class="stats-item statistic__third">
+                                <span>25%</span>
+                                <p>
+                                    Ad-Texte
+                                </p>
+                            </div>
+                            <div class="stats-item statistic__fourth">
+                                <span>25%</span>
+                                <p>
+                                    E-Mails
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#!" class="statistic__cta cta">termin anfragen</a>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback__box">
+                    <div class="feedback__content">
+                        <div class="section-head">
+                            <p class="section-head__reminder">
+                                Klar, deine Software ist genial
+                            </p>
+                            <h2 class="section-head__title">Satz für Satz mehr</h2>
+                            <h2 class="section-head__subtitle">
+                                Software-Sales
+                            </h2>
+                            <p class="section-head__text">
+                                Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner
+                                Kunden
+                                erleichtern.
+                            </p>
+                        </div>
+                        <form class="feedback__form">
+                            <div class="feedback__form-fields">
+                                <div class="feedback__form-field">
+                                    <input placeholder="Name" type="text" name="formName" id="formName">
+                                </div>
+                                <div class="feedback__form-field">
+                                    <input placeholder="Email" type="email" name="formEmail" id="formEmail">
+                                </div>
+                                <div class="feedback__form-field">
+                                    <input placeholder="Phone" type="number" name="formPhone" id="formPhone">
+                                </div>
+                                <div class="feedback__form-text">
+                                    <textarea placeholder="Text" name="formArea" id="formArea"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="feedback__form-cta cta">
+                                termin anfragen
+                            </button>
+                        </form>
+                    </div>
+                    <div class="feedback__thumb">
+                        <img src="./assets/img/feedback.jpg" alt="Thumbnail">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="faq__content">
+                    <div class="section-head">
+                        <p class="section-head__reminder">
+                            Klar, deine Software ist genial
+                        </p>
+                        <h2 class="section-head__title">Frequently asked</h2>
+                        <h2 class="section-head__subtitle">
+                            questions
+                        </h2>
+                        <p class="section-head__text">
+                            Unsere Werbetexte verwandeln Software-Features in Problemlöser, die den Alltag deiner
+                            Kunden
+                            erleichtern.
+                        </p>
+                    </div>
+                    <ul class="faq__list">
+                        <li class="faq__item js-faq">
+                            <div class="faq__head">
+                                <div class="plusminus"></div>
+                                <h3 class="faq__title">
+                                    Quisque pulvinar feugiat ante vel interdum mauris vel aliquam magna?
+                                </h3>
+                            </div>
+                            <div class="faq__inner">
+                                <p class="faq__text">
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                    himenaeos. Mauris at luctus neque. Etiam non quam a felis blandit eleifend.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq__item js-faq">
+                            <div class="faq__head">
+                                <div class="plusminus"></div>
+                                <h3 class="faq__title">
+                                    Quisque pulvinar feugiat ante vel interdum mauris vel aliquam magna?
+                                </h3>
+                            </div>
+                            <div class="faq__inner">
+                                <p class="faq__text">
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                    himenaeos. Mauris at luctus neque. Etiam non quam a felis blandit eleifend.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq__item js-faq">
+                            <div class="faq__head">
+                                <div class="plusminus"></div>
+                                <h3 class="faq__title">
+                                    Quisque pulvinar feugiat ante vel interdum mauris vel aliquam magna?
+                                </h3>
+                            </div>
+                            <div class="faq__inner">
+                                <p class="faq__text">
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                    himenaeos. Mauris at luctus neque. Etiam non quam a felis blandit eleifend.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq__item js-faq">
+                            <div class="faq__head">
+                                <div class="plusminus"></div>
+                                <h3 class="faq__title">
+                                    Quisque pulvinar feugiat ante vel interdum mauris vel aliquam magna?
+                                </h3>
+                            </div>
+                            <div class="faq__inner">
+                                <p class="faq__text">
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                    himenaeos. Mauris at luctus neque. Etiam non quam a felis blandit eleifend.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="faq__item js-faq">
+                            <div class="faq__head">
+                                <div class="plusminus"></div>
+                                <h3 class="faq__title">
+                                    Quisque pulvinar feugiat ante vel interdum mauris vel aliquam magna?
+                                </h3>
+                            </div>
+                            <div class="faq__inner">
+                                <p class="faq__text">
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                    himenaeos. Mauris at luctus neque. Etiam non quam a felis blandit eleifend.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#!" class="faq__cta cta">
+                    termin anfragen
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__menu">
+                <div class="footer__col">
+                    <p class="footer__title">
+                        Company name
+                    </p>
+                    <p class="footer__location">Musterstraße 18 50667 Köln Deutschland</p>
+                </div>
+                <div class="footer__col">
+                    <p class="footer__title">
+                        Kontakt
+                    </p>
+                    <nav class="footer__contact">
+                        <ul>
+                            <li><a href="tel:+0123456789">0123456789</a></li>
+                            <li><a href="mailto:hello@mail.de">hello@mail.de</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__col">
+                    <p class="footer__title">
+                        Mehr
+                    </p>
+                    <nav class="footer__map">
+                        <ul>
+                            <li><a href="#!">Start</a></li>
+                            <li><a href="#!">Termin buchen</a></li>
+                            <li><a href="#!">Referenzen</a></li>
+                            <li><a href="#!">Artikel</a></li>
+                            <li><a href="#!">Landingpage</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <img width="73" height="55" src="./assets/img/icons/logo.png" alt="Logotype">
+                </div>
+                <ul class="footer__legals">
+                    <li><a href="#!">Datenschutz</a></li>
+                    <li><a href="#!">Impressum</a></li>
+                </ul>
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#!" target="_blank">
+                            <img src="./assets/img/icons/ico-facebook.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" target="_blank">
+                            <img src="./assets/img/icons/ico-link.svg" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" target="_blank">
+                            <img src="./assets/img/icons/ico-tube.svg" alt="YouTube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" target="_blank">
+                            <img src="./assets/img/icons/ico-inst.svg" alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

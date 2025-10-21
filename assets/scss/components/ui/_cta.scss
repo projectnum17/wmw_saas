@@ -1,0 +1,11 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.cta {
+    font: 700 16px / 120% var(--ff-base);
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border-radius: var(--accent-border-r);
+    background: var(--accent-color);
+    color: var(--white);
+}

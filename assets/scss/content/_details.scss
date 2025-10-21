@@ -1,0 +1,99 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.details {
+    margin-bottom: var(--section-mb);
+    $recHeight: 120px;
+
+    &__cta {
+        display: flex;
+        margin: 96px auto 0;
+        width: max-content;
+    }
+
+    &__hero {
+        height: 900px;
+        overflow: hidden;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__img {
+        &:last-of-type {
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &__scanner {
+        position: absolute;
+        top: calc(0px + (#{$recHeight} / 2));
+        left: 50%;
+        transform: translateX(-50%);
+        height: 10px;
+        width: 371px;
+        background: #007047;
+    }
+
+    &__rec {
+        top: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 474px;
+        height: $recHeight;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px) saturate(180%) contrast(90%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(90%);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        // box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    &__hero {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__card {
+        max-width: 318px;
+        padding: 40px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px) saturate(100%) contrast(100%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(100%);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__category {
+        font: 900 36px / 120% var(--ff-base);
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font: 400 16px / 170% var(--ff-base);
+        color: var(--text-color-half);
+    }
+}

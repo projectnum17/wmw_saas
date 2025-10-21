@@ -8,8 +8,11 @@
     }
 }
 
-@include font-face('Aeion Mono', 'ff_400', 400, normal);
-@include font-face('Aeion Mono', 'ff_700', 700, normal);
-@include font-face('Aeion Mono', 'ff_900', 900, normal);
+@include font-face('Aeion Mono', 'ffBase_400', 400, normal);
+@include font-face('Aeion Mono', 'ffBase_700', 700, normal);
+@include font-face('Aeion Mono', 'ffBase_900', 900, normal);
+@include font-face('Effra VF Trial', 'ffSecondary_300', 300, normal);
+@include font-face('Effra VF Trial', 'ffSecondary_700', 700, normal);
+@include font-face('Chill', 'ffChill_400', 400, normal);
 
 

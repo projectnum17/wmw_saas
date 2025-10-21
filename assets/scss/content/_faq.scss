@@ -1,0 +1,126 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.faq {
+    .section-head {
+        max-width: 451px;
+        margin: 0;
+        text-align: left;
+
+        &__title {
+            padding: 4px 24px;
+        }
+
+        &__text {
+            max-width: 351px;
+            margin: 0;
+            padding-inline: 24px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: var(--section-mb);
+    }
+
+    &__cta {
+        margin: 0 auto;
+        display: flex;
+        width: max-content;
+    }
+
+    &__list {
+        max-width: 718px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__head {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__item {
+        cursor: pointer;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #23252326;
+
+        &:last-child {
+            padding-bottom: 0;
+            border: none;
+        }
+
+        &.is-active {
+            .faq__inner {
+                grid-template-rows: 1fr;
+            }
+            .faq__text {
+                margin-top: 24px;
+            }
+            .plusminus {
+                &:before {
+                    transform: translatey(-50%) rotate(-90deg);
+                    opacity: 0;
+                }
+                &:after {
+                    transform: translatey(-50%) rotate(0);
+                }
+            }
+        }
+
+        .plusminus {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+
+            &:before,
+            &:after {
+                content: '';
+                border-radius: 3px;
+                display: block;
+                background-color: #009961;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transition: 0.35s;
+                width: 100%;
+                height: 3px;
+            }
+
+            &:before {
+                transform: translatey(-50%);
+            }
+
+            &:after {
+                transform: translatey(-50%) rotate(90deg);
+            }
+        }
+    }
+
+    &__title {
+        font: 700 20px / 170% var(--ff-base);
+    }
+
+    &__text {
+        font: 400 16px / 170% var(--ff-base);
+        overflow: hidden;
+        padding-left: 41px;
+        color: #232523b2;
+        @include transitions(0.3s, ease-in);
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-rows: 0fr;
+        @include transitions(0.3s, ease-in);
+    }
+}
