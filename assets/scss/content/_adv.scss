@@ -10,6 +10,14 @@
     background: linear-gradient(109.51deg, #007047 10.99%, #003b25 90.15%);
     color: var(--white);
 
+    @include media('tablet') {
+        padding-block: 48px;
+    }
+    @include media('mobile') {
+        border-radius: 20px 20px 0 0;
+        padding-block: 24px;
+    }
+
     &__bg {
         object-fit: cover;
         position: absolute;
@@ -25,6 +33,15 @@
         gap: 40px;
         justify-content: space-between;
         margin-bottom: 100px;
+
+        @include media('tablet') {
+            margin-bottom: 56px;
+            flex-direction: column;
+        }
+        @include media('mobile') {
+            margin-bottom: 32px;
+            gap: 20px;
+        }
     }
 
     &__card {
@@ -32,6 +49,13 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        @include media('tablet') {
+            gap: 24px;
+        }
+        @include media('mobile') {
+            gap: 12px;
+        }
 
         @include hover {
             .adv__thumbnail img {
@@ -48,6 +72,10 @@
         position: relative;
         border-radius: 10px;
         overflow: hidden;
+        @include media('mobile') {
+            height: 320px;
+            border-radius: 15px;
+        }
 
         img {
             width: 100%;
@@ -75,6 +103,12 @@
     &__title {
         font: 900 36px / 120% var(--ff-base);
         text-transform: uppercase;
+        @include media('tablet') {
+            font-size: 32px;
+        }
+        @include media('mobile') {
+            font-size: 24px;
+        }
     }
 
     &__text {

@@ -4,8 +4,31 @@
 .cta {
     font: 700 16px / 120% var(--ff-base);
     text-transform: uppercase;
+    border: 1px solid transparent;
     padding: 16px 36px;
     border-radius: var(--accent-border-r);
     background: var(--accent-color);
     color: var(--white);
+
+    @include media('tablet') {
+        padding: 13px 23px;
+    }
+
+    @include media('mobile') {
+        border-radius: 20px 0 20px 0
+    }
+
+    @include transitions(0.3s, ease-in);
+    @include hover {
+        background: transparent;
+        border-radius: 15px 0 15px 0;
+        border-color: var(--accent-color);
+        color: var(--text-color);
+    }
+
+    &--light {
+        @include hover {
+            color: var(--white);
+        }
+    }
 }

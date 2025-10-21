@@ -2,12 +2,25 @@
 @use '../base/mixins' as *;
 
 .header {
-    // position: sticky;
-    // top: 0;
     z-index: 2;
     padding-block: 24px;
     margin-bottom: 40px;
     background: var(--body-bg);
+    @include transitions(0.2s, ease-in);
+
+    @include media('tablet') {
+        margin-bottom: 12px;
+        padding-block: 18px;
+    }
+
+    @include media('mobile') {
+        position: sticky;
+        top: 0;
+        &.is-scrolled {
+            padding-block: 12px;
+            box-shadow: 0 0 8rem rgba(24, 90, 104, 0.2901960784);
+        }
+    }
 
     .container {
         display: flex;
@@ -19,8 +32,13 @@
     &__logo {
         display: inline-flex;
         flex-shrink: 0;
-        width: 73;
+        width: 73px;
         height: 55px;
+
+        @include media('mobile') {
+            width: 53px;
+            height: 35px;
+        }
 
         img {
             width: 100%;
@@ -28,9 +46,41 @@
         }
     }
 
+    &__burger {
+        display: none;
+        width: 36px;
+        height: 20px;
+        flex-direction: column;
+        justify-content: space-around;
+
+        span {
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-color);
+        }
+        @include media('mobile') {
+            display: flex;
+        }
+    }
+
+    &__cta {
+        @include media('mobile') {
+            display: none;
+        }
+    }
+
     &__nav {
         max-width: 401px;
         width: 100%;
+
+        @include media('tablet') {
+            max-width: 320px;
+        }
+
+        @include media('mobile') {
+            display: none;
+        }
+
         ul {
             margin: 0;
             padding: 0;
@@ -47,6 +97,10 @@
 
             a {
                 font: inherit;
+                @include transitions(0.2s, ease-in);
+                @include hover {
+                    color: var(--accent-color);
+                }
             }
         }
     }

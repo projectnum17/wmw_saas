@@ -10,6 +10,14 @@
     background: linear-gradient(109.51deg, #007047 10.99%, #003b25 90.15%);
     color: var(--white);
 
+    @include media('tablet') {
+        padding-block: 48px;
+    }
+    @include media('mobile') {
+        padding-block: 24px;
+        border-radius: 20px 20px 0 0;
+    }
+
     &__bg {
         object-fit: cover;
         position: absolute;
@@ -25,22 +33,50 @@
         gap: 40px;
         justify-content: space-between;
         margin-bottom: 100px;
+
+        @include media('tablet') {
+            margin-bottom: 56px;
+        }
+        @include media('mobile') {
+            margin-bottom: 32px;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__card {
         flex: 1;
         display: flex;
         flex-direction: column;
+
+        img {
+            @include media('mobile') {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 
     &__check {
         margin-bottom: 30px;
+
+        @include media('mobile') {
+            margin-bottom: 12px;
+        }
     }
 
     &__title {
         font: 900 36px / 120% var(--ff-base);
         text-transform: uppercase;
         margin-bottom: 16px;
+
+        @include media('tablet') {
+            font-size: 32px;
+        }
+        @include media('mobile') {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
     }
 
     &__text {

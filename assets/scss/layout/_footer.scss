@@ -6,6 +6,15 @@
     padding-block: 72px 80px;
     color: var(--text-color-half);
 
+    @include media('tablet') {
+        padding-block: 48px;
+    }
+
+    @include media('mobile') {
+        padding-block: 24px;
+        font-size: 16px;
+    }
+
     ul {
         margin: 0;
         padding: 0;
@@ -43,6 +52,14 @@
         align-items: flex-start;
         gap: 20px;
         justify-content: space-between;
+        @include media('tablet') {
+            padding-bottom: 48px;
+        }
+
+        @include media('mobile') {
+            flex-direction: column;
+            padding-bottom: 24px;
+        }
     }
 
     &__map {
@@ -50,6 +67,9 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+            @include media('mobile') {
+                gap: 10px;
+            }
         }
     }
 
@@ -58,6 +78,11 @@
         text-transform: capitalize;
         margin-bottom: 24px;
         color: var(--text-color);
+
+        @include media('mobile') {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
     }
 
     &__info {
@@ -67,6 +92,13 @@
         gap: 20px;
         padding-top: 72px;
         border-top: 1px solid #89a3ab40;
+        @include media('tablet') {
+            padding-top: 48px;
+        }
+        @include media('mobile') {
+            padding-top: 24px;
+            flex-direction: column;
+        }
     }
 
     &__legals {
@@ -76,6 +108,11 @@
 
         li {
             font: 300 18px / 150% var(--ff-sec);
+
+            @include media('mobile') {
+                font-size: 16px;
+            }
+
             a {
                 font: inherit;
             }
@@ -86,6 +123,10 @@
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @include media('mobile') {
+            gap: 5px;
+        }
 
         a {
             display: inline-flex;

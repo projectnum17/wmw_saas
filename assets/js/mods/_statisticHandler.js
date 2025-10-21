@@ -26,52 +26,6 @@ const statisticHandler = () => {
         path.style.strokeDashoffset = '0';
     };
 
-    const animateMainSVG = (svg, duration = 1000) => {
-        if (!svg) return;
-
-        const allPaths = svg.querySelectorAll('path');
-        const numberPaths = svg.querySelectorAll('path.number');
-
-        allPaths.forEach((path, i) => {
-            if (!path.classList.contains('number')) {
-                const prevFill = path.getAttribute('fill') || '#00D98A';
-                path.style.fill = 'none';
-                path.style.stroke = prevFill;
-                path.style.strokeWidth = '2';
-                const length = path.getTotalLength();
-                path.style.strokeDasharray = length;
-                path.style.strokeDashoffset = length;
-                path.style.transition = 'none';
-                path.getBoundingClientRect();
-
-                setTimeout(() => {
-                    path.style.transition = `stroke-dashoffset ${duration}ms ease-in-out`;
-                    path.style.strokeDashoffset = '0';
-                }, i * 150);
-
-                setTimeout(() => {
-                    path.style.transition = `fill 500ms ease`;
-                    path.style.fill = prevFill;
-                    path.style.stroke = 'none';
-                }, duration + i * 150);
-            }
-        });
-
-        numberPaths.forEach((numPath, i) => {
-            numPath.style.opacity = '0';
-            numPath.style.transform = 'translateY(10px)';
-            numPath.style.transition = `opacity 0.8s ease, transform 0.8s ease, fill 1s ease`;
-            const fillColor = numPath.getAttribute('fill') || '#ffffff';
-            numPath.style.fill = 'transparent';
-
-            setTimeout(() => {
-                numPath.style.opacity = '1';
-                numPath.style.transform = 'translateY(0)';
-                numPath.style.fill = fillColor;
-            }, duration + 200 + i * 150);
-        });
-    };
-
     const animateStatsItems = (box) => {
         const items = box.querySelectorAll('.stats-item');
         items.forEach((item, i) => {
@@ -122,7 +76,6 @@ const statisticHandler = () => {
                         !svg.dataset.animated
                     ) {
                         svg.dataset.animated = 'true';
-                        animateMainSVG(svg);
                     }
 
                     animateStatsItems(box);

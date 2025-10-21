@@ -9,11 +9,26 @@
         display: flex;
         margin: 96px auto 0;
         width: max-content;
+        @include media('mobile') {
+            margin: 32px auto 0;
+        }
     }
 
     &__hero {
+        z-index: -1;
         height: 900px;
+        max-width: 600px;
+        width: 100%;
         overflow: hidden;
+        @include media('tablet') {
+            height: auto;
+        }
+
+        @include media('mobile') {
+            width: 100%;
+            height: 100vh;
+            height: 100svh;
+        }
     }
 
     &__content {
@@ -21,9 +36,18 @@
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
+        @include media('mobile') {
+            flex-direction: column;
+            gap: 12px;
+        }
     }
 
     &__img {
+        @include media('mobile') {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         &:last-of-type {
             position: absolute;
             top: 0;
@@ -38,6 +62,10 @@
         height: 10px;
         width: 371px;
         background: #007047;
+
+        @include media('mobile') {
+            width: 280px;
+        }
     }
 
     &__rec {
@@ -52,7 +80,10 @@
         backdrop-filter: blur(6px) saturate(180%) contrast(90%);
         -webkit-backdrop-filter: blur(20px) saturate(180%) contrast(90%);
         border: 1px solid rgba(255, 255, 255, 0.2);
-        // box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        @include media('mobile') {
+            width: 320px;
+            border-radius: 20px;
+        }
     }
 
     &__hero {
@@ -66,6 +97,10 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @include media('mobile') {
+            gap: 12px;
+            width: 100%;
+        }
     }
 
     &__card {
@@ -81,15 +116,38 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
+        @include media('tablet') {
+            padding: 28px;
+        }
+        @include media('mobile') {
+            padding: 16px;
+            width: 100%;
+            border-radius: 20px;
+            max-width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+
         img {
             width: 40px;
             height: 40px;
+
+            @include media('mobile') {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
 
     &__category {
         font: 900 36px / 120% var(--ff-base);
         text-transform: uppercase;
+        @include media('tablet') {
+            font-size: 32px;
+        }
+        @include media('mobile') {
+            font-size: 24px;
+        }
     }
 
     &__description {

@@ -7,6 +7,12 @@
         align-items: stretch;
         justify-content: space-between;
         gap: 24px;
+        @include media('tablet') {
+            flex-direction: column;
+        }
+        @include media('mobile') {
+            gap: 6px;
+        }
     }
 
     &__content {
@@ -14,6 +20,13 @@
         padding: 64px;
         box-shadow: 0px 4px 35px 0px #0000000d;
         background: #f1f3ea0d;
+        @include media('tablet') {
+            padding: 48px;
+        }
+        @include media('mobile') {
+            padding: 16px;
+            border-radius: 20px;
+        }
 
         &-label {
             display: inline-flex;
@@ -23,6 +36,10 @@
             margin-bottom: 8px;
             border: 1px solid var(--accent-color);
             color: var(--accent-color);
+            @include media('mobile') {
+                font-size: 14px;
+                padding: 5px 25px;
+            }
         }
 
         &-title {
@@ -30,12 +47,24 @@
             margin-bottom: 32px;
             padding-bottom: 32px;
             border-bottom: 1px solid #23252326;
+
+            @include media('tablet') {
+                font-size: 36px;
+            }
+            @include media('mobile') {
+                font-size: 24px;
+                padding-bottom: 12px;
+                margin-bottom: 12px;
+            }
         }
 
         &-text {
             margin-bottom: 40px;
             font: 400 16px / 170% var(--ff-base);
             color: var(--text-color-half);
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &-list {
@@ -43,11 +72,19 @@
             align-items: flex-start;
             gap: 24px;
             margin-bottom: 56px;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 28px;
+            }
 
             .col {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+                @include media('mobile') {
+                    gap: 12px;
+                }
             }
         }
 
@@ -64,6 +101,9 @@
             gap: 16px;
             font: 400 16px / 170% var(--ff-base);
             color: var(--text-color-half);
+            @include media('mobile') {
+                gap: 10px;
+            }
 
             &::before {
                 content: '';
@@ -88,6 +128,15 @@
         justify-content: flex-end;
         border-radius: var(--accent-border-r);
         background: linear-gradient(111.03deg, #007047 15.37%, #003b25 99.27%);
+        @include media('tablet') {
+            max-width: 100%;
+            min-height: auto;
+            padding: 48px;
+        }
+
+        @include media('mobile') {
+            padding: 16px;
+        }
 
         &-label {
             font: 400 16px / 100% var(--ff-base);
@@ -98,6 +147,11 @@
             margin-bottom: 8px;
             border: 1px solid var(--white);
             color: var(--white);
+
+            @include media('mobile') {
+                font-size: 14px;
+                padding: 5px 25px;
+            }
         }
 
         &-feather {
@@ -111,11 +165,27 @@
             max-width: -moz-fit-content;
             max-width: fit-content;
             aspect-ratio: 1;
+            @include media('tablet') {
+                max-width: 200px;
+                left: -50px;
+                top: 0;
+                transform: translateY(-70%);
+            }
+
+            @include media('mobile') {
+                transform: translateY(-82%);
+            }
         }
 
         &-value {
             font: 900 56px / 170% var(--ff-base);
             color: var(--white);
+            @include media('tablet') {
+                font-size: 48px;
+            }
+            @include media('mobile') {
+                font-size: 32px;
+            }
         }
 
         &-signature {
@@ -123,6 +193,13 @@
             font: 400 29px / 170% var(--ff-chill);
             margin-bottom: 8px;
             color: var(--white);
+            @include media('tablet') {
+                text-align: left;
+            }
+
+            @include media('mobile') {
+                font-size: 20px;
+            }
         }
     }
 
@@ -181,6 +258,10 @@
             vertical-align: middle;
             flex-shrink: 0;
             backface-visibility: hidden;
+            @include media('mobile') {
+                max-width: 100%;
+                width: 90px;
+            }
         }
 
         @keyframes marquee {

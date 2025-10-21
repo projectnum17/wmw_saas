@@ -6,17 +6,36 @@
     margin: 0 auto 192px;
     text-align: center;
 
+    @include media('tablet') {
+        margin: 0 auto 120px;
+    }
+
+    @include media('mobile') {
+        margin: 0 auto 80px;
+    }
+
     &__reminder {
         font: 900 12px / 150% var(--ff-base);
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 16px;
+
+        @include media('mobile') {
+            margin-bottom: 8px;
+        }
     }
 
     &__title {
         font: 900 56px / 120% var(--ff-base);
         text-transform: uppercase;
         margin-bottom: 4px;
+
+        @include media('tablet') {
+            font-size: 48px;
+        }
+        @include media('mobile') {
+            font-size: 32px;
+        }
     }
 
     &__subtitle {
@@ -28,6 +47,16 @@
         border-radius: var(--accent-border-r);
         color: var(--white);
         background: var(--accent-color);
+        @include media('tablet') {
+            font-size: 48px;
+            padding: 8px 15px;
+        }
+
+        @include media('mobile') {
+            font-size: 24px;
+            border-radius: 15px 0 15px 0;
+            margin-bottom: 12px;
+        }
     }
 
     &__text {

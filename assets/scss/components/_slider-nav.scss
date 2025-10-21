@@ -8,6 +8,10 @@
     align-items: center;
     gap: 8px;
 
+    @include media('mobile') {
+        padding-top: 32px;
+    }
+
     &__btn {
         display: inline-flex;
         flex-shrink: 0;
@@ -22,6 +26,12 @@
         &.swiper-button-disabled {
             svg {
                 color: #23252333;
+
+                path {
+                    stroke {
+                        color: #23252333;
+                    }
+                }
             }
         }
     }

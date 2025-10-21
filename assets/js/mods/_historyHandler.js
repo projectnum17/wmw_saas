@@ -21,11 +21,11 @@ const historyHandler = () => {
         });
         ScrollTrigger.create({
             trigger: section,
-            start: 'top top',
+            start: 'top-=70 top',
             end: () => `+=${(total - 1) * window.innerHeight * 0.8}`,
             pin: true,
             scrub: false,
-            snap: 1 / (total - 1),
+            // snap: 1 / (total - 1),
             onUpdate: (self) => {
                 const stepProgress = 1 / (total - 1);
                 let activeIndex = Math.round(self.progress / stepProgress);

@@ -46,6 +46,31 @@ const sliders = () => {
                 prevEl: '.js-testimonials-prev',
                 nextEl: '.js-testimonials-next',
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    grid: {
+                        rows: 1,
+                    },
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 2,
+                    grid: {
+                        rows: 2,
+                        fill: 'row',
+                    },
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 2,
+                    grid: {
+                        rows: 2,
+                        fill: 'row',
+                    },
+                    spaceBetween: 50,
+                },
+            },
         });
     };
 

@@ -23,7 +23,7 @@ const scannerHandler = () => {
 
         ScrollTrigger.create({
             trigger: section,
-            start: 'top-=20 top',
+            start: 'top-=70 top',
             end: `+=${scanHeight}`,
             pin: true,
             scrub: true,

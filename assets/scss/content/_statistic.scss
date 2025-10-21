@@ -9,6 +9,14 @@
     border-radius: 30px 30px 0 0;
     background: linear-gradient(103.4deg, #007047 -29.03%, #003b25 93.35%);
 
+    @include media('tablet') {
+        padding-block: 48px;
+    }
+    @include media('mobile') {
+        padding-block: 24px;
+        border-radius: 20px 20px 0 0;
+    }
+
     &__bg {
         position: absolute;
         inset: 0;
@@ -32,6 +40,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
         margin-bottom: 101px;
+        @include media('mobile') {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 12px;
+            margin-bottom: 32px;
+        }
     }
 
     &__card {
@@ -50,6 +63,15 @@
             }
         }
 
+        @include media('mobile') {
+            border-radius: 20px;
+            padding: 24px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 14px;
+        }
+
         &-avatar {
             display: inline-flex;
             flex-shrink: 0;
@@ -57,6 +79,11 @@
             height: 96px;
             border-radius: 50%;
             overflow: hidden;
+
+            @include media('mobile') {
+                width: 56px;
+                height: 56px;
+            }
 
             img {
                 width: 100%;
@@ -69,17 +96,29 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+            @include media('mobile') {
+                gap: 12px;
+            }
         }
 
         &-name {
             font: 900 36px / 120% var(--ff-base);
             text-transform: uppercase;
             color: var(--white);
+            @include media('tablet') {
+                font-size: 32px;
+            }
+            @include media('mobile') {
+                font-size: 24px;
+            }
         }
 
         &-text {
             font: 400 16px / 170% var(--ff-base);
             color: #ffffffb2;
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         &-more {
@@ -89,6 +128,9 @@
             align-items: center;
             margin-top: auto;
             color: var(--white);
+            @include media('mobile') {
+                font-size: 14px;
+            }
 
             svg {
                 display: inline-flex;
@@ -132,12 +174,24 @@
             max-width: 673px;
             margin: 0 auto;
 
+            @include media('tablet') {
+                width: 100%;
+                max-width: 100%;
+            }
+
             .statistic__box {
                 position: relative;
                 padding: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include media('mobile') {
+                    border-radius: 20px;
+
+                    img {
+                        max-width: 220px;
+                    }
+                }
             }
         }
         &:first-child {
@@ -147,6 +201,14 @@
             justify-content: space-between;
             margin-bottom: 27px;
 
+            @include media('tablet') {
+                flex-direction: column;
+            }
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
+
             .statistic__box {
                 padding: 91px 62px;
                 flex: 1;
@@ -154,6 +216,22 @@
                 align-items: center;
                 justify-content: space-between;
                 gap: 10px;
+
+                @include media('tablet') {
+                    width: 100%;
+                }
+
+                @include media('mobile') {
+                    padding: 20px;
+                    border-radius: 20px;
+
+                    .col:last-child {
+                        max-width: 120px;
+                        svg {
+                            width: 100%;
+                        }
+                    }
+                }
 
                 &-title {
                     font: 400 16px/ 140% var(--ff-base);
@@ -164,6 +242,12 @@
                 &-val {
                     font: 900 70px / 52px var(--ff-base);
                     color: var(--white);
+                    @include media('tablet') {
+                        font-size: 48px;
+                    }
+                    @include media('mobile') {
+                        font-size: 32px;
+                    }
                 }
 
                 &-num {
@@ -200,9 +284,16 @@
         opacity: 0;
         transform: translateY(20px);
 
+        @include media('mobile') {
+            max-width: 120px;
+        }
+
         span {
             font: 400 16px / 140% var(--ff-base);
             color: #ffffffb2;
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         p {
@@ -211,6 +302,9 @@
             gap: 8px;
             font: 900 22px / 20px var(--ff-base);
             color: var(--white);
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
     }
 
@@ -219,6 +313,10 @@
         left: 11%;
         align-items: flex-end;
         text-align: right;
+
+        @include media('mobile') {
+            left: -10%;
+        }
 
         span {
             margin-right: 24px;
@@ -232,6 +330,10 @@
                 border-radius: 50%;
                 flex-shrink: 0;
                 background: #009961;
+                @include media('mobile') {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
     }
@@ -239,9 +341,22 @@
         top: 5%;
         right: 18%;
         gap: 17px;
+
+        @include media('mobile') {
+            gap: 0;
+            top: 4%;
+            right: 6%;
+        }
+
         span {
             font: 900 70px / 52px var(--ff-base);
             color: var(--white);
+            @include media('tablet') {
+                font-size: 48px;
+            }
+            @include media('mobile') {
+                font-size: 32px;
+            }
         }
         p {
             &::before {
@@ -252,12 +367,19 @@
                 border-radius: 50%;
                 flex-shrink: 0;
                 background: #fff;
+                @include media('mobile') {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
     }
     .statistic__third {
         bottom: 25%;
         right: 11%;
+        @include media('mobile') {
+            right: 1%;
+        }
 
         p {
             &::before {
@@ -268,6 +390,10 @@
                 border-radius: 50%;
                 flex-shrink: 0;
                 background: #00d98a;
+                @include media('mobile') {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
     }
@@ -283,6 +409,10 @@
                 border-radius: 50%;
                 flex-shrink: 0;
                 background: #004f32;
+                @include media('mobile') {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
     }

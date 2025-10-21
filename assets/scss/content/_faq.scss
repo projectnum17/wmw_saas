@@ -7,14 +7,30 @@
         margin: 0;
         text-align: left;
 
+        @include media('tablet') {
+            margin: 0 auto 56px;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        @include media('mobile') {
+            margin: 0 auto 24px;
+        }
+
         &__title {
             padding: 4px 24px;
+            @include media('tablet') {
+                padding: 0;
+            }
         }
 
         &__text {
             max-width: 351px;
             margin: 0;
             padding-inline: 24px;
+            @include media('tablet') {
+                max-width: 100%;
+            }
         }
     }
 
@@ -24,6 +40,11 @@
         justify-content: space-between;
         gap: 20px;
         margin-bottom: var(--section-mb);
+
+        @include media('tablet') {
+            flex-direction: column;
+            gap: 0;
+        }
     }
 
     &__cta {
@@ -34,12 +55,17 @@
 
     &__list {
         max-width: 718px;
-    }
-
-    &__list {
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        @include media('tablet') {
+            max-width: 100%;
+        }
+
+        @include media('mobile') {
+            gap: 24px;
+        }
     }
 
     &__head {
@@ -53,6 +79,10 @@
         padding-bottom: 40px;
         border-bottom: 1px solid #23252326;
 
+        @include media('mobile') {
+            padding-bottom: 24px;
+        }
+
         &:last-child {
             padding-bottom: 0;
             border: none;
@@ -64,6 +94,9 @@
             }
             .faq__text {
                 margin-top: 24px;
+                @include media('mobile') {
+                    margin-top: 12px;
+                }
             }
             .plusminus {
                 &:before {
@@ -81,6 +114,8 @@
             width: 25px;
             height: 25px;
             cursor: pointer;
+            flex-shrink: 0;
+            display: inline-flex;
 
             &:before,
             &:after {
@@ -108,6 +143,9 @@
 
     &__title {
         font: 700 20px / 170% var(--ff-base);
+        @include media('mobile') {
+            font-size: 18px;
+        }
     }
 
     &__text {
@@ -116,6 +154,9 @@
         padding-left: 41px;
         color: #232523b2;
         @include transitions(0.3s, ease-in);
+        @include media('mobile') {
+            font-size: 14px;
+        }
     }
 
     &__inner {
