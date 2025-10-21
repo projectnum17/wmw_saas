@@ -1,5 +1,4 @@
 const historyHandler = () => {
-    window.addEventListener('load', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const section = document.querySelector('.js-history-trigger');
@@ -56,7 +55,6 @@ const historyHandler = () => {
                 }
             },
         });
-    });
 };
 
 export default historyHandler;

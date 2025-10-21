@@ -1,5 +1,4 @@
 const scannerHandler = () => {
-    window.addEventListener('load', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const section = document.querySelector('.js-scanner-content');
@@ -43,7 +42,6 @@ const scannerHandler = () => {
                 rec.style.transform = `translate(-50%, ${scannerY}px)`;
             },
         });
-    });
 };
 
 export default scannerHandler;
