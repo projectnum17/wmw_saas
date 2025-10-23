@@ -2,6 +2,9 @@
 @use '../base/mixins' as *;
 
 .pricing {
+    @include media('mobile') {
+        padding-top: 170px;
+    }
     .container:first-child {
         display: flex;
         align-items: stretch;

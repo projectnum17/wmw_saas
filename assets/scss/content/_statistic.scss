@@ -2,6 +2,7 @@
 @use '../base/mixins' as *;
 
 .statistic {
+    overflow: hidden;
     padding-block: 96px 160px;
     position: relative;
     max-width: 1920px;
@@ -15,6 +16,17 @@
     @include media('mobile') {
         padding-block: 24px;
         border-radius: 20px 20px 0 0;
+    }
+
+    .abs-block {
+        @include media('mobile') {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-shrink: 0;
+            min-width: 768px;
+        }
     }
 
     &__bg {
@@ -196,7 +208,7 @@
         }
         &:first-child {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             gap: 24px;
             justify-content: space-between;
             margin-bottom: 27px;
@@ -242,6 +254,9 @@
                 &-val {
                     font: 900 70px / 52px var(--ff-base);
                     color: var(--white);
+                    display: inline-flex;
+                    flex-wrap: nowrap;
+                    min-width: max-content;
                     @include media('tablet') {
                         font-size: 48px;
                     }
@@ -315,7 +330,7 @@
         text-align: right;
 
         @include media('mobile') {
-            left: -10%;
+            left: 23%;
         }
 
         span {
@@ -337,6 +352,7 @@
             }
         }
     }
+
     .statistic__second {
         top: 5%;
         right: 18%;
@@ -345,7 +361,7 @@
         @include media('mobile') {
             gap: 0;
             top: 4%;
-            right: 6%;
+            right: 31%;
         }
 
         span {
@@ -378,7 +394,8 @@
         bottom: 25%;
         right: 11%;
         @include media('mobile') {
-            right: 1%;
+            bottom: 30%;
+            right: 27%;
         }
 
         p {
@@ -399,7 +416,18 @@
     }
     .statistic__fourth {
         bottom: 15%;
-        left: 18%;
+        left: 17%;
+        align-items: flex-end;
+        text-align: right;
+
+        @include media('mobile') {
+            bottom: 15%;
+            left: 33%;
+        }
+
+        span {
+            margin-right: 24px;
+        }
         p {
             &::after {
                 content: '';
@@ -415,5 +443,28 @@
                 }
             }
         }
+    }
+
+    .odometer-formatting-mark {
+        display: none !important;
+    }
+    .odometer {
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: visible !important;
+    }
+
+    .odometer-inside {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .odometer-digit {
+        line-height: 1;
+    }
+
+    .odometer-value {
+        line-height: 1;
     }
 }

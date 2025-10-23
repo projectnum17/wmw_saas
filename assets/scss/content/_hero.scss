@@ -23,7 +23,7 @@
     &__title {
         font: 900 56px / 120% var(--ff-base);
         text-transform: uppercase;
-        padding: 4px 24px;
+        padding: 4px 0;
         @include media('tablet') {
             font-size: 48px;
             padding: 0;
@@ -215,6 +215,11 @@
         overflow: hidden;
         border-radius: var(--accent-border-r);
         box-shadow: 0px 4px 35px 0px #0000001a;
+        @include hover {
+            .hero__play {
+                transform: translate(-50%, -50%) scale(1.15);
+            }
+        }
 
         @include media('mobile') {
             max-width: 100%;
@@ -275,6 +280,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        animation: animate-pulse 3s linear infinite;
         @include transitions(0.3s, ease-in);
         @include media('mobile') {
             width: 48px;
@@ -295,6 +301,24 @@
         &.is-simple {
             backdrop-filter: none;
             box-shadow: none;
+        }
+        @keyframes animate-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 153, 97, 0.6),
+                    0 0 0 0 rgba(0, 153, 97, 0.4);
+            }
+            40% {
+                box-shadow: 0 0 0 25px rgba(0, 153, 97, 0),
+                    0 0 0 0 rgba(0, 153, 97, 0.5);
+            }
+            80% {
+                box-shadow: 0 0 0 45px rgba(0, 153, 97, 0),
+                    0 0 0 15px rgba(0, 153, 97, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 153, 97, 0),
+                    0 0 0 15px rgba(0, 153, 97, 0);
+            }
         }
     }
 

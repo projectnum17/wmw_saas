@@ -1,61 +1,62 @@
 const historyHandler = () => {
-        gsap.registerPlugin(ScrollTrigger);
+    const steps = document.querySelectorAll('.js-history-step');
+    const blocks = document.querySelectorAll('.js-history-block');
 
-        const section = document.querySelector('.js-history-trigger');
-        const steps = gsap.utils.toArray('.js-history-progress');
-        const contents = gsap.utils.toArray('.js-history-block');
+    if (!steps.length || !blocks.length) {
+        console.warn('Элементы шагов или контента не найдены.');
+        return;
+    }
 
-        if (!section || !steps.length || !contents.length) return;
+    const stepObserverOptions = {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0,
+    };
 
-        const total = contents.length;
-        let lastIndex = 0;
+    steps[0].classList.add('is-active');
 
-        contents.forEach((item, i) => {
-            gsap.set(item, {
-                opacity: i === 0 ? 1 : 0,
-                scale: i === 0 ? 1 : 0.9,
-                visibility: i === 0 ? 'visible' : 'hidden',
-                yPercent: 0,
-            });
-        });
-        ScrollTrigger.create({
-            trigger: section,
-            start: 'top-=70 top',
-            end: () => `+=${(total - 1) * window.innerHeight * 0.8}`,
-            pin: true,
-            scrub: false,
-            // snap: 1 / (total - 1),
-            onUpdate: (self) => {
-                const stepProgress = 1 / (total - 1);
-                let activeIndex = Math.round(self.progress / stepProgress);
-                activeIndex = Math.min(Math.max(activeIndex, 0), total - 1);
+    const stepObserverCallback = (entries) => {
+        entries.forEach((entry) => {
+            const index = Array.from(blocks).indexOf(entry.target);
 
-                if (activeIndex !== lastIndex) {
-                    contents.forEach((content, i) => {
-                        const visible = i === activeIndex;
-
-                        gsap.to(content, {
-                            opacity: visible ? 1 : 0,
-                            scale: visible ? 1 : 0.9,
-                            visibility: visible ? 'visible' : 'hidden',
-                            yPercent: 0,
-                            duration: 0.3,
-                            ease: 'power2.out',
-                            overwrite: 'auto',
-                        });
-
-                        if (i <= activeIndex) {
-                            steps[i]?.classList.add('is-active');
-                        } else {
-                            steps[i]?.classList.remove('is-active');
-                        }
-                    });
-
-                    lastIndex = activeIndex;
+            if (entry.isIntersecting) {
+                for (let i = 0; i <= index; i++) {
+                    steps[i].classList.add('is-active');
                 }
-            },
+
+                for (let i = index + 1; i < steps.length; i++) {
+                    steps[i].classList.remove('is-active');
+                }
+            }
         });
+    };
+
+    const stepObserver = new IntersectionObserver(
+        stepObserverCallback,
+        stepObserverOptions
+    );
+    blocks.forEach((block) => stepObserver.observe(block));
+
+    const animationObserverOptions = {
+        root: null,
+        rootMargin: '0px 0px -20% 0px',
+        threshold: 0,
+    };
+
+    const animationObserverCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const animationObserver = new IntersectionObserver(
+        animationObserverCallback,
+        animationObserverOptions
+    );
+    blocks.forEach((block) => animationObserver.observe(block));
 };
 
 export default historyHandler;
-

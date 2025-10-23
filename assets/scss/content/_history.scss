@@ -2,28 +2,37 @@
 @use '../base/mixins' as *;
 
 .history {
+    @include media('tablet') {
+        margin-bottom: 150px;
+    }
+    @include media('mobile') {
+        margin-bottom: 0;
+    }
     .section-head {
         margin: 0 auto var(--section-mb);
     }
 
     &__display {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         gap: 20px;
-        // height: 80vh;
-        height: 100vh;
-        overflow: hidden;
+        position: relative;
         @include media('mobile') {
             flex-direction: column;
         }
     }
 
     &__steps {
+        position: sticky;
+        top: 10rem;
+        height: fit-content;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         max-width: 356px;
         width: 100%;
         @include media('mobile') {
             max-width: 100%;
+            display: none;
         }
 
         &-items {
@@ -147,15 +156,11 @@
         }
 
         &-items {
-            position: absolute;
-            // top: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            width: 100%;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            @include media('tablet') {
-                top: 4%;
+            &:not(:last-child) {
+                margin-bottom: 10rem;
+                @include media('mobile') {
+                    margin-bottom: 32px;
+                }
             }
         }
 
@@ -200,4 +205,15 @@
             }
         }
     }
+}
+
+.js-history-block {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.js-history-block.is-visible {
+    opacity: 1;
+    transform: translateX(0);
 }

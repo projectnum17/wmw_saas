@@ -1,20 +1,20 @@
 const statisticHandler = () => {
     const statisticBoxes = document.querySelectorAll('.statistic__box');
 
-    const animateValue = (el, duration = 2000) => {
-        const rawText = el.textContent;
-        const hasPlus = rawText.includes('+');
-        const endValue = parseInt(rawText.replace(/\D/g, '')) || 0;
-        const startTime = performance.now();
+    // const animateValue = (el, duration = 2000) => {
+    //     const rawText = el.textContent;
+    //     const hasPlus = rawText.includes('+');
+    //     const endValue = parseInt(rawText.replace(/\D/g, '')) || 0;
+    //     const startTime = performance.now();
 
-        const update = (now) => {
-            const progress = Math.min((now - startTime) / duration, 1);
-            const value = Math.floor(progress * endValue);
-            el.textContent = value + (hasPlus ? '+' : '');
-            if (progress < 1) requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-    };
+    //     const update = (now) => {
+    //         const progress = Math.min((now - startTime) / duration, 1);
+    //         const value = Math.floor(progress * endValue);
+    //         el.textContent = value + (hasPlus ? '+' : '');
+    //         if (progress < 1) requestAnimationFrame(update);
+    //     };
+    //     requestAnimationFrame(update);
+    // };
 
     const animateSVGPath = (path, duration = 2000) => {
         const length = path.getTotalLength();
@@ -51,7 +51,7 @@ const statisticHandler = () => {
 
                     if (numberEl && !numberEl.dataset.animated) {
                         numberEl.dataset.animated = 'true';
-                        animateValue(numberEl);
+                        // animateValue(numberEl);
                     }
 
                     const svgPaths = box.querySelectorAll('.col svg path');
@@ -87,6 +87,41 @@ const statisticHandler = () => {
     );
 
     statisticBoxes.forEach((box) => observer.observe(box));
+
+    const odometerElements = document.querySelectorAll('.odometer');
+
+    odometerElements.forEach((el) => {
+        const targetValue = parseInt(el.getAttribute('data-number'), 10);
+
+        if (isNaN(targetValue)) return;
+
+        const odometer = new Odometer({
+            el: el,
+            value: 0,
+            format: 'd',
+            duration: 2000,
+        });
+
+        let hasRun = false;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasRun) {
+                        setTimeout(() => {
+                            odometer.update(targetValue);
+                        }, 100);
+
+                        hasRun = true;
+                        observer.unobserve(el);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        observer.observe(el);
+    });
 };
 
 export default statisticHandler;

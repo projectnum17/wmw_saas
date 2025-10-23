@@ -39,6 +39,27 @@
             @include media('mobile') {
                 margin: 0 auto 24px;
             }
+
+            &__reminder {
+                padding-left: 24px;
+                @include media('mobile') {
+                    padding-left: 0;
+                }
+            }
+
+            &__title {
+                padding-left: 24px;
+                @include media('mobile') {
+                    padding-left: 0;
+                }
+            }
+
+            &__text {
+                padding-left: 24px;
+                @include media('mobile') {
+                    padding-left: 0;
+                }
+            }
         }
     }
 

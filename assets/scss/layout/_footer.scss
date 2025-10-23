@@ -15,6 +15,13 @@
         font-size: 16px;
     }
 
+    a {
+        @include transitions(.2s, ease-in);
+        @include hover {
+            color: var(--accent-color);
+        }
+    }
+
     ul {
         margin: 0;
         padding: 0;
